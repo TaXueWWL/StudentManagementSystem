@@ -1,0 +1,29 @@
+---------------10.26开发记录------------------
+1. 设计footer.html用于版本声明
+2. header-default为初始登录header
+3. header-user为普通用户header
+4. header-admin为管理员header
+-------------------未完成---------------------
+* user及admin中设置注销按钮，并重定向至初始页面，同时清理缓存
+<%
+	session.invalidate();
+ 	response.sendRedirect("login.jsp");
+%>
+
+==============================================
+-----------------10.27/28开发记录---------
+1. 静态页面部署基本完成
+2. 后台页面单独设计，通过admin.jsp登录
+3. 设置页头导航和页尾版权声明为浮动页面
+===========================================
+------------------10.29-----------------
+1. 添加学生及管理员过滤文件validate.jsp以及validatestudent.jsp，从而使只有数据库中的数据才能登陆；而且避免了直接通过url进行登陆
+2. 解决插入数据时单个数据未能插入的问题
+	原因：未能与数据库字段相同
+3. 添加系统注销功能，admin-exit.jsp/student-exit.jsp
+	方法：在exit页面中使用
+<%
+		session.removeAttribute("admin");
+%>
+<jsp:forward page="index.jsp"></jsp:forward>
+清除会话中的admin/student属性，并重定向页面至首页
