@@ -62,3 +62,9 @@ A system that can manage students' grades and message themselves
 	<font color="green">学生 <font color="red">${sessionScope.id}</font>欢迎使用在线成绩查询</font>
 					</h1>
 4.增加学生成绩查询页面
+
+-----11.1------------
+
+1.增加删除信息页面，
+2. bug修复
+3. 删除信息模块成功运行

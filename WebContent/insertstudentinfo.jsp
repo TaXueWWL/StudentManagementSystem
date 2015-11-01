@@ -19,26 +19,6 @@
 <body>
 	<jsp:include page="header-admin.html"></jsp:include>
 	<%
-		/*Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-		
-		String url = "jdbc:mysql://localhost/studentmanagementsystem?useUnicode=true&characterEncoding=utf-8";
-		String user = "snowalker";
-		String sqlpassword = "admin";
-		
-		//加载驱动程序  
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-		}
-		
-		//建立数据库连接
-		try {
-			con = DriverManager.getConnection("url", "user", "sqlpassword");
-			stmt = con.createStatement();
-		} catch (SQLException ee) {
-		}*/
 		Connection connection = new conn().getCon();
 
 		Statement statement = connection.createStatement();

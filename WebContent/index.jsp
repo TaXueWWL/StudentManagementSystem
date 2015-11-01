@@ -47,7 +47,7 @@
 					
 					<form class="form-actions" action="validatestudent.jsp" method="post">
 					<center>
-						<label>账号<input type="text" id="studentid" name="id"/></label><br>
+						<label>学号<input type="text" id="studentid" name="id"/></label><br>
 						<label>密码<input type="password" id="password"name="password"></label>
 					</center>
 						<center>
@@ -81,8 +81,7 @@
                                 <li><h3>前台:bootstrap,jquery,JSP</h3></li>
                                 <li><h3>后台:Servlet,scriptlet,JavaBean</h3></li>
                                 <li><h3>数据库:Mysql</h3></li>
-                            </ul>
-                        
+                            </ul>          
                     </center>
                 </div>
 			</div>
