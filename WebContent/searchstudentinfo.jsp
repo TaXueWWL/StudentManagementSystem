@@ -32,7 +32,7 @@ table {
 				<br>
 				<center>
 					<h1>
-						<font color="green">学生数据详细列表</font>
+						<font color="green">【学生数据详细列表】</font>
 					</h1>
 				</center>
 				<br>
@@ -89,7 +89,7 @@ table {
 					</table>
 					<center>
 						<h1>
-							<font color="green">数据取出完毕</font>
+							<font color="green">【数据取出完毕】</font>
 						</h1>
 					</center>
 

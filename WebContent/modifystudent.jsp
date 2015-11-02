@@ -16,7 +16,7 @@
 	request.setCharacterEncoding("utf-8");
 %>
 
-<title>删除学生信息</title>
+
 </head>
 <jsp:include page="islogin.jsp"></jsp:include>
 <jsp:useBean id="connectToDB" class="com.app.snowalker.conn.conn"></jsp:useBean>
@@ -31,57 +31,51 @@
 
 
 		stmt = connection.createStatement();
+		
 		System.out.print("数据库连接成功");
 
 	%>
-	
-	<table width="100%"><tr>
 	<br><br><br><br><br><br>
-	<td align="center"><font color="red"><h1>【删除学生信息】</h1></font></td>
+	<table width="100%"><tr>
+	<td align="center"><h1><font color="red">【修改学生信息】</font></h1></td>
 	</tr>
 	</table>
 	
 	<br>
-	
+
 	<center>
-		<form action="deletestudent_2.jsp" method="post">
-			<h3>请选择要删除的学生：</h3> <br> <select name="id" style="font-size:20px; font-family:'微软雅黑';font-style:bold ;">
+	
+	
+	
+	
 		
+		
+
+		<form action="modifystudent_2.jsp" method="post">
+			<h3><font color="blue">请选择你想修改的学生： </font></h3>
+			<br>
+			<select name="id"  style="font-size:20px; font-family:'微软雅黑';font-style:bold ;">
+			
 				<%
-					String sql = "select * from studenttable";
-					
-					String sql1 = "select * from studenttable";
-				
-					try {
-						rs = stmt.executeQuery(sql);
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
-				
-					
-					
-					while (rs.next()) {
+				try {
+					rs = stmt.executeQuery("select * from studenttable");
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+					while (rs.next()){
 						String id = rs.getString("id");
 						String name = rs.getString("name");
 				%>
-				<option value="<%=id%>" ><%=name%>/<%=id%></option>
+				<option value="<%=id%>"><%=id%>/<%=name%></option>
 				<%
 					}
 				%>
 			</select>
-			<P>
-			<br><br>
-			<center>
-			<button type="submit" class="btn btn-primary btn-lg">确定</button>
+			<P><br><br>
+				<button type="submit" class="btn btn-primary btn-lg">确定</button>&nbsp;&nbsp;
 			<button type="reset" class="btn btn-primary btn-lg">重置</button>
-			</center>
-			
-			
-			
-			</p>
-			
 		</form>
-	</center>
+		</center>
     
 	<jsp:include page="footer.html"></jsp:include>
 	<script src="js/jquery.js"></script>

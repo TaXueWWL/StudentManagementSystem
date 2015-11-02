@@ -68,3 +68,8 @@ A system that can manage students' grades and message themselves
 1.增加删除信息页面，
 2. bug修复
 3. 删除信息模块成功运行
+
+-----11.2---------
+
+1.修改学生信息模块增加
+2.bug修复
